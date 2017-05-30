@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -115,6 +116,7 @@ func writeFile(filename string, contentLen uint32, data []byte) error {
 		return fmt.Errorf("not found dest file by req file:%s", filename)
 	}
 	log.Logger.Info("now OpenFile(write):%s", tmpFile)
+	os.MkdirAll(filepath.Dir(tmpFile), os.ModePerm)
 	f, err := os.OpenFile(tmpFile, os.O_CREATE|os.O_TRUNC|os.O_RDWR, os.ModePerm)
 	if err != nil {
 		return err

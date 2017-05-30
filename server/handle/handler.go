@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net"
 	"os"
+	"path/filepath"
 	"strings"
 	"sync"
 	"time"
@@ -55,7 +56,7 @@ func processHeartBeat(conn net.Conn) error {
 		}
 		syncproto.LogMsg(conn, msg)
 		if msg.GetMsgType() != syncproto.PROTO_MSG_HEART_BETA_REQ {
-			common.WriteMsg([]byte(ERR_ONLY_SUPPORT_HEARTBEAT_MSG.Error()), conn)
+			log.Logger.Warn("not heartbeat msg,resp msg is:%d,%s", msg.GetMsgType(), syncproto.GetMsgName(msg.GetMsgType()))
 			tmpTry++
 			time.Sleep(time.Duration(syncproto.HEART_BEAT_INTERVAL) * time.Second)
 			continue
@@ -76,6 +77,7 @@ func processHeartBeat(conn net.Conn) error {
 		}
 		err = common.WriteMsg(msgData, conn)
 		if err != nil {
+			log.Logger.Warn("WriteMsg failed,err:%s", err.Error())
 			tmpTry++
 			time.Sleep(time.Duration(syncproto.HEART_BEAT_INTERVAL) * time.Second)
 			continue
@@ -97,9 +99,33 @@ func StartHeartBeatListener() {
 }
 
 func syncFiles(conn net.Conn) error {
+	clientIp := strings.Split(conn.RemoteAddr().String(), ":")[0]
+	moniDir := ""
 	// 查找上一次同步时间,如果未同步过则全同步,如果距离上次同步间有部分文件未同步则部分同步
+	for _, dir := range config.GServerConf.MoniDirs {
+		for _, ip := range dir.WhiteList {
+			tmpIp := strings.Split(ip, ":")[0]
+			if tmpIp == clientIp {
+				moniDir = dir.DirName
+				break
+			}
+		}
+	}
+	if moniDir == "" {
+		log.Logger.Debug("not found dir by ip:%s", clientIp)
+		return nil
+	}
+	log.Logger.Info("will sync dir:%s to client:%s", moniDir, clientIp)
+	err := filepath.Walk(moniDir, func(path string, info os.FileInfo, err error) error {
+		if info.IsDir() {
+			eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Create}
+		} else {
+			eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Write}
+		}
 
-	return nil
+		return nil
+	})
+	return err
 }
 
 func syncFileOnline(conn net.Conn) error {
@@ -121,6 +147,7 @@ func syncFileOnline(conn net.Conn) error {
 			syncFiles(conn)
 		}(conn)
 	}
+
 	return nil
 }
 

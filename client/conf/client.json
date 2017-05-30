@@ -1,7 +1,7 @@
 {
     "listen":":9091",
-    "debug":true,
-    "log_file":"server.log",
+    "debug":false,
+    "log_file":"client.log",
     "log_file_num":3,
     "sync_dir":[
         {

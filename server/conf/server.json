@@ -1,6 +1,6 @@
 {
     "listen":":9090",
-    "debug":true,
+    "debug":false,
     "log_file":"server.log",
     "log_file_num":3,
     "moni_dir":[
