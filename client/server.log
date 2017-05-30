@@ -1,0 +1,276 @@
+2017/05/29 16:53:54 [I] [main.go:33] program [client.exe] start...
+2017/05/29 16:53:54 [E] [handler.go:64] Dial for heartbeat to server::%!d(string=:6001) failed,err:dial tcp: too many colons in address :%!d(string=:6001)
+2017/05/29 16:53:54 [E] [handler.go:64] Dial for heartbeat to server::%!d(string=:6001) failed,err:dial tcp: too many colons in address :%!d(string=:6001)
+2017/05/29 16:53:54 [E] [net.go:22] Listen [:9090] failed,err:listen tcp :9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2017/05/29 16:59:03 [I] [main.go:33] program [client.exe] start...
+2017/05/29 16:59:03 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100:%!d(string=:6001) failed,err:dial tcp: too many colons in address 192.168.1.100:%!d(string=:6001)
+2017/05/29 16:59:03 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100:%!d(string=:6001) failed,err:dial tcp: too many colons in address 192.168.1.100:%!d(string=:6001)
+2017/05/29 16:59:19 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/29 17:01:52 [I] [main.go:33] program [client.exe] start...
+2017/05/29 17:01:52 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:01:52 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:02:22 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:02:22 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:02:52 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:02:52 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:03:22 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:03:22 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:03:52 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:03:52 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:04:22 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:04:22 [E] [handler.go:64] Dial for heartbeat to server:192.168.1.100: failed,err:dial tcp 192.168.1.100:0: connectex: The requested address is not valid in its context.
+2017/05/29 17:04:25 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/29 17:04:44 [I] [main.go:33] program [client.exe] start...
+2017/05/29 17:04:44 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 17:04:44 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 17:06:25 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/29 18:09:46 [I] [main.go:33] program [client.exe] start...
+2017/05/29 18:09:46 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:09:46 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:09:51 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:09:51 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:09:56 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:09:56 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:10:01 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:10:01 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:10:06 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:10:06 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:10:07 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/29 18:13:57 [I] [main.go:33] program [client.exe] start...
+2017/05/29 18:13:57 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:14:02 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:14:07 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:14:12 [D] [proto.go:18] version:1,msgType:2002,filename:,filemd5:,contentLen:0
+2017/05/29 18:14:17 [W] [handler.go:36] HeartBeat with server:192.168.1.100:6001 failed,err:write tcp 192.168.1.100:55346->192.168.1.100:6001: wsasend: An existing connection was forcibly closed by the remote host.
+2017/05/29 18:14:18 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: connectex: No connection could be made because the target machine actively refused it.
+2017/05/29 18:14:24 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: connectex: No connection could be made because the target machine actively refused it.
+2017/05/29 18:14:27 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 13:35:58 [I] [main.go:33] program [client.exe] start...
+2017/05/30 13:36:19 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2017/05/30 13:36:45 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2017/05/30 13:37:11 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2017/05/30 13:37:37 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2017/05/30 13:37:42 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 13:42:25 [I] [main.go:33] program [client.exe] start...
+2017/05/30 13:42:30 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: i/o timeout
+2017/05/30 13:42:40 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: i/o timeout
+2017/05/30 13:42:50 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.100:6001 failed,err:dial tcp 192.168.1.100:6001: i/o timeout
+2017/05/30 13:42:55 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 13:44:04 [I] [main.go:33] program [client.exe] start...
+2017/05/30 13:44:04 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:09 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:14 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:19 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:24 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:29 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:34 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:39 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:44 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:49 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:54 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:44:59 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:45:04 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:45:09 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:45:14 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:45:18 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 13:48:31 [I] [main.go:33] program [client.exe] start...
+2017/05/30 13:48:31 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:48:36 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:48:41 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:48:42 [D] [proto.go:37] conn:192.168.1.104:60582, version:1,msgType:2,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:1
+2017/05/30 13:48:42 [D] [proto.go:37] conn:192.168.1.104:60583, version:1,msgType:4,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 13:48:46 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:48:46 [D] [proto.go:37] conn:192.168.1.104:60584, version:1,msgType:2,filename:E:\MyCode\a.txt,filemd5:,contentLen:1
+2017/05/30 13:48:51 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:48:56 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:49:01 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:49:06 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:49:07 [D] [proto.go:37] conn:192.168.1.104:60592, version:1,msgType:8,filename:E:\MyCode\a.txt,filemd5:,contentLen:0
+2017/05/30 13:49:11 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:49:16 [D] [proto.go:37] conn:192.168.1.104:6001, version:1,msgType:2147483648,filename:,filemd5:,contentLen:0
+2017/05/30 13:49:21 [W] [handler.go:36] HeartBeat with server:192.168.1.104:6001 failed,err:write tcp 192.168.1.104:60578->192.168.1.104:6001: wsasend: An existing connection was forcibly closed by the remote host.
+2017/05/30 13:49:22 [E] [handler.go:29] Dial for heartbeat to server:192.168.1.104:6001 failed,err:dial tcp 192.168.1.104:6001: connectex: No connection could be made because the target machine actively refused it.
+2017/05/30 13:49:23 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 13:58:39 [I] [main.go:33] program [client.exe] start...
+2017/05/30 13:58:39 [D] [proto.go:65] conn:192.168.1.104:6001, version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 13:58:44 [D] [proto.go:65] conn:192.168.1.104:6001, version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 13:58:49 [D] [proto.go:65] conn:192.168.1.104:6001, version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 13:58:54 [D] [proto.go:65] conn:192.168.1.104:6001, version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 13:58:59 [D] [proto.go:65] conn:192.168.1.104:6001, version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 13:59:00 [D] [proto.go:65] conn:192.168.1.104:60733, version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:1
+2017/05/30 13:59:00 [D] [proto.go:65] conn:192.168.1.104:60734, version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 13:59:01 [D] [proto.go:65] conn:192.168.1.104:60735, version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:1
+2017/05/30 13:59:04 [D] [proto.go:65] conn:192.168.1.104:60736, version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:0
+2017/05/30 13:59:04 [D] [proto.go:65] conn:192.168.1.104:6001, version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 13:59:08 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 14:05:42 [I] [main.go:33] program [client.exe] start...
+2017/05/30 14:05:42 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:05:47 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:05:50 [D] [proto.go:65] conn:192.168.1.104:60826,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:1
+2017/05/30 14:05:50 [D] [proto.go:65] conn:192.168.1.104:60827,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 14:05:52 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:05:54 [D] [proto.go:65] conn:192.168.1.104:60829,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 14:05:57 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:06:01 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 14:09:58 [I] [main.go:33] program [client.exe] start...
+2017/05/30 14:09:58 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:03 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:08 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:09 [D] [proto.go:65] conn:192.168.1.104:60876,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建 RTF 文档.rtf,filemd5:,contentLen:1
+2017/05/30 14:10:09 [D] [proto.go:65] conn:192.168.1.104:60877,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建 RTF 文档.rtf,filemd5:,contentLen:7
+2017/05/30 14:10:12 [D] [proto.go:65] conn:192.168.1.104:60878,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\新建 RTF 文档.rtf,filemd5:,contentLen:0
+2017/05/30 14:10:13 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:18 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:23 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:28 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:10:33 [W] [handler.go:36] HeartBeat with server:192.168.1.104:6001 failed,err:write tcp 192.168.1.104:60870->192.168.1.104:6001: wsasend: An existing connection was forcibly closed by the remote host.
+2017/05/30 14:10:34 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 14:36:47 [I] [main.go:33] program [client.exe] start...
+2017/05/30 14:36:47 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:36:52 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:36:57 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:02 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:07 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:12 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:17 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:22 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:27 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:32 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:37 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:42 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:47 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:52 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:57 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:37:59 [D] [proto.go:65] conn:192.168.1.104:61105,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:1
+2017/05/30 14:37:59 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:37:59 [D] [proto.go:65] conn:192.168.1.104:61106,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 14:37:59 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:38:02 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:05 [D] [proto.go:65] conn:192.168.1.104:61107,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:1
+2017/05/30 14:38:05 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\a.txt
+2017/05/30 14:38:07 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:12 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:17 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:22 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:27 [D] [proto.go:65] conn:192.168.1.104:61114,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\a.txt.bak,filemd5:,contentLen:1
+2017/05/30 14:38:27 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\a.txt.bak
+2017/05/30 14:38:27 [D] [proto.go:65] conn:192.168.1.104:61115,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:1
+2017/05/30 14:38:27 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\a.txt
+2017/05/30 14:38:27 [D] [proto.go:65] conn:192.168.1.104:61116,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:12
+2017/05/30 14:38:27 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\a.txt
+2017/05/30 14:38:27 [D] [proto.go:65] conn:192.168.1.104:61117,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:12
+2017/05/30 14:38:27 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\a.txt
+2017/05/30 14:38:27 [D] [proto.go:65] conn:192.168.1.104:61118,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:12
+2017/05/30 14:38:27 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\a.txt
+2017/05/30 14:38:27 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:32 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:37 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:42 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:47 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:52 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:57 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:38:58 [D] [proto.go:65] conn:192.168.1.104:61129,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\a.txt.bak,filemd5:,contentLen:0
+2017/05/30 14:38:58 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\a.txt.bak
+2017/05/30 14:39:00 [D] [proto.go:65] conn:192.168.1.104:61130,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:0
+2017/05/30 14:39:00 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\a.txt
+2017/05/30 14:39:02 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:39:07 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:39:12 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:39:17 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:39:22 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:39:27 [W] [handler.go:37] HeartBeat with server:192.168.1.104:6001 failed,err:write tcp 192.168.1.104:61094->192.168.1.104:6001: wsasend: An existing connection was forcibly closed by the remote host.
+2017/05/30 14:39:28 [E] [handler.go:30] Dial for heartbeat to server:192.168.1.104:6001 failed,err:dial tcp 192.168.1.104:6001: connectex: No connection could be made because the target machine actively refused it.
+2017/05/30 14:39:30 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 14:43:09 [I] [main.go:33] program [client.exe] start...
+2017/05/30 14:43:09 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:14 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:19 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:24 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:29 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:34 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:39 [D] [proto.go:65] conn:192.168.1.104:61192,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:1
+2017/05/30 14:43:39 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:43:39 [D] [proto.go:65] conn:192.168.1.104:61193,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 14:43:39 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:43:39 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:44 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:47 [D] [proto.go:65] conn:192.168.1.104:61194,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:1
+2017/05/30 14:43:47 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\a.txt
+2017/05/30 14:43:49 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:54 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:43:59 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:44:04 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:44:09 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:44:15 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 14:49:50 [I] [main.go:33] program [client.exe] start...
+2017/05/30 14:49:50 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:49:55 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:49:59 [D] [proto.go:65] conn:192.168.1.104:61236,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:1
+2017/05/30 14:49:59 [D] [proto.go:65] conn:192.168.1.104:61237,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 14:49:59 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:49:59 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:50:00 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:05 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:05 [D] [proto.go:65] conn:192.168.1.104:61240,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\b.txt,filemd5:,contentLen:1
+2017/05/30 14:50:05 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\b.txt
+2017/05/30 14:50:05 [D] [proto.go:65] conn:192.168.1.104:61241,version:1,msgType:1004,msgName:renameReq,filename:E:\MyCode\新建文本文档.txt,filemd5:,contentLen:0
+2017/05/30 14:50:05 [I] [handler.go:155] now Remove:E:\MyCodeBak\新建文本文档.txt
+2017/05/30 14:50:10 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:11 [D] [proto.go:65] conn:192.168.1.104:61242,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\b.txt,filemd5:,contentLen:0
+2017/05/30 14:50:11 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\b.txt
+2017/05/30 14:50:15 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:18 [D] [proto.go:65] conn:192.168.1.104:61245,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建 好压 RAR 压缩文件.rar,filemd5:,contentLen:1
+2017/05/30 14:50:18 [I] [handler.go:101] now OpenFile(create):E:\MyCodeBak\新建 好压 RAR 压缩文件.rar
+2017/05/30 14:50:18 [D] [proto.go:65] conn:192.168.1.104:61246,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建 好压 RAR 压缩文件.rar,filemd5:,contentLen:20
+2017/05/30 14:50:18 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\新建 好压 RAR 压缩文件.rar
+2017/05/30 14:50:18 [D] [proto.go:65] conn:192.168.1.104:61247,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建 好压 RAR 压缩文件.rar,filemd5:,contentLen:20
+2017/05/30 14:50:18 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\新建 好压 RAR 压缩文件.rar
+2017/05/30 14:50:18 [D] [proto.go:65] conn:192.168.1.104:61248,version:1,msgType:1002,msgName:writeReq,filename:E:\MyCode\新建 好压 RAR 压缩文件.rar,filemd5:,contentLen:20
+2017/05/30 14:50:18 [I] [handler.go:117] now OpenFile(write):E:\MyCodeBak\新建 好压 RAR 压缩文件.rar
+2017/05/30 14:50:20 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:23 [D] [proto.go:65] conn:192.168.1.104:61251,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\新建 好压 RAR 压缩文件.rar,filemd5:,contentLen:0
+2017/05/30 14:50:23 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\新建 好压 RAR 压缩文件.rar
+2017/05/30 14:50:25 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:27 [D] [proto.go:65] conn:192.168.1.104:61254,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文件夹,filemd5:,contentLen:0
+2017/05/30 14:50:27 [I] [handler.go:98] now MkdirAll:E:\MyCodeBak\新建文件夹
+2017/05/30 14:50:29 [D] [proto.go:65] conn:192.168.1.104:61255,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\aaa,filemd5:,contentLen:0
+2017/05/30 14:50:29 [I] [handler.go:98] now MkdirAll:E:\MyCodeBak\aaa
+2017/05/30 14:50:29 [D] [proto.go:65] conn:192.168.1.104:61256,version:1,msgType:1004,msgName:renameReq,filename:E:\MyCode\新建文件夹,filemd5:,contentLen:0
+2017/05/30 14:50:29 [I] [handler.go:153] now rename:E:\MyCodeBak\新建文件夹 is dir,not operate
+2017/05/30 14:50:30 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:35 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:40 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:45 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:50 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:50:55 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:00 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:05 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:10 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:15 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:20 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:25 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:29 [D] [proto.go:65] conn:192.168.1.104:61269,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\aaa,filemd5:,contentLen:0
+2017/05/30 14:51:29 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\aaa
+2017/05/30 14:51:30 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:33 [D] [proto.go:65] conn:192.168.1.104:61271,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\a.txt,filemd5:,contentLen:0
+2017/05/30 14:51:33 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\a.txt
+2017/05/30 14:51:35 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:40 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:51:44 [I] [main.go:24] recv signal:interrupt then exit
+2017/05/30 14:53:41 [I] [main.go:33] program [client.exe] start...
+2017/05/30 14:53:41 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:53:46 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:53:51 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:53:52 [D] [proto.go:65] conn:192.168.1.104:61327,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\新建文件夹,filemd5:,contentLen:0
+2017/05/30 14:53:52 [I] [handler.go:98] now MkdirAll:E:\MyCodeBak\新建文件夹
+2017/05/30 14:53:56 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:53:59 [D] [proto.go:65] conn:192.168.1.104:61331,version:1,msgType:1004,msgName:renameReq,filename:E:\MyCode\新建文件夹,filemd5:,contentLen:0
+2017/05/30 14:53:59 [I] [handler.go:153] now rename:E:\MyCodeBak\新建文件夹 is dir,removeall
+2017/05/30 14:53:59 [D] [proto.go:65] conn:192.168.1.104:61332,version:1,msgType:1001,msgName:createReq,filename:E:\MyCode\a,filemd5:,contentLen:0
+2017/05/30 14:53:59 [I] [handler.go:98] now MkdirAll:E:\MyCodeBak\a
+2017/05/30 14:54:01 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:54:04 [D] [proto.go:65] conn:192.168.1.104:61333,version:1,msgType:1003,msgName:removeReq,filename:E:\MyCode\a,filemd5:,contentLen:0
+2017/05/30 14:54:04 [I] [handler.go:138] now RemoveAll:E:\MyCodeBak\a
+2017/05/30 14:54:06 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:54:11 [D] [proto.go:65] conn:192.168.1.104:6001,version:1,msgType:3001,msgName:heartBeatResp,filename:,filemd5:,contentLen:0
+2017/05/30 14:54:12 [I] [main.go:24] recv signal:interrupt then exit

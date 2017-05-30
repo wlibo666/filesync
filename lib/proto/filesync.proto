@@ -1,0 +1,11 @@
+syntax = "proto2";
+package proto;
+
+message FileSyncProto {
+    required uint32 Version = 1;
+    required uint32 MsgType = 2;
+    optional string FileName = 3;
+    optional string FileMd5 = 4;
+    required uint32 ContentLen = 5;
+    optional bytes Content = 6;
+}

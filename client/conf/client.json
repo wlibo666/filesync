@@ -1,0 +1,13 @@
+{
+    "listen":":9091",
+    "debug":true,
+    "log_file":"server.log",
+    "log_file_num":3,
+    "sync_dir":[
+        {
+            "server_dir":"E:\\MyCode",
+            "local_dir":"E:\\MyCodeBak",
+            "server_addr":"192.168.1.104:9090"
+        }
+    ]
+}

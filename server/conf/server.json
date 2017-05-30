@@ -1,0 +1,14 @@
+{
+    "listen":":9090",
+    "debug":true,
+    "log_file":"server.log",
+    "log_file_num":3,
+    "moni_dir":[
+        {
+            "dir":"E:\\MyCode",
+            "white_list":[
+                "192.168.1.104:9091"
+            ]
+        }
+    ]
+}
