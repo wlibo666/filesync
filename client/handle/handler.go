@@ -83,8 +83,22 @@ func HeartBeat(conn net.Conn) error {
 func getDestFile(filename string) string {
 	for _, dir := range config.GClientConf.SyncDirs {
 		if strings.Contains(filename, dir.ServerDirName) {
-			tmpFile := strings.Replace(filename, dir.ServerDirName, dir.LocalDirName, 1)
-			return tmpFile
+			// server is windows
+			if strings.Contains(dir.ServerDirName, "\\") {
+				// client is windows
+				if strings.Contains(dir.LocalDirName, "\\") {
+					return dir.LocalDirName + "\\" + strings.TrimPrefix(filename, dir.ServerDirName)
+				} else {
+					return filepath.Join(dir.LocalDirName, strings.Replace(strings.TrimLeft(filename, dir.ServerDirName), "\\", "/", -1))
+				}
+			} else {
+				// client is windows
+				if strings.Contains(dir.LocalDirName, "\\") {
+					return dir.LocalDirName + "\\" + strings.Replace(strings.TrimPrefix(filename, dir.ServerDirName), "/", "\\", -1)
+				} else {
+					return filepath.Join(dir.LocalDirName, strings.TrimPrefix(filename, dir.ServerDirName))
+				}
+			}
 		}
 	}
 	return ""
