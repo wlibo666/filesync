@@ -1,5 +1,5 @@
 {
-    "listen":":9090",
+    "listen":"0.0.0.0:9090",
     "debug":false,
     "log_file":"server.log",
     "log_file_num":3,

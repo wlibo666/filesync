@@ -22,7 +22,9 @@ import (
 var (
 	ERR_ONLY_SUPPORT_HEARTBEAT_MSG = errors.New("Only support heartbeat msg in this port")
 
-	eventChan = make(chan fsnotify.Event, syncproto.SYNC_FILE_NUM_ONETIME)
+	eventChan    = make(chan fsnotify.Event, syncproto.SYNC_FILE_NUM_ONETIME)
+	moniDirNames = make(map[string]chan bool)
+	dirRwLock    = sync.RWMutex{}
 
 	ClientsAddr   = make(map[string]bool)
 	HeartBeatList = make(map[string]int64)
@@ -119,6 +121,13 @@ func fileExist(filename string) bool {
 	return true
 }
 
+func moniDirFunc(dirName string) {
+	go func(path string) {
+		log.Logger.Info("moni dir:%s", path)
+		newFileWatcher(path)
+	}(dirName)
+}
+
 func syncFiles(conn net.Conn) error {
 	clientIp := strings.Split(conn.RemoteAddr().String(), ":")[0]
 	moniDir := ""
@@ -142,7 +151,8 @@ func syncFiles(conn net.Conn) error {
 			return nil
 		}
 		if info.IsDir() {
-			eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Create}
+			//eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Create}
+			moniDirFunc(path)
 		} else {
 			// check file is exist or not
 			if !fileExist(path) {
@@ -256,6 +266,7 @@ func syncCmdPorcess(event fsnotify.Event) error {
 			return err
 		}
 		if fi.IsDir() {
+			moniDirFunc(event.Name)
 			msg.ContentLen = proto.Uint32(syncproto.PROTO_DIR_LEN)
 		} else {
 			msg.ContentLen = proto.Uint32(syncproto.PROTO_FILE_LEN)
@@ -271,10 +282,30 @@ func syncCmdPorcess(event fsnotify.Event) error {
 		msg.ContentLen = proto.Uint32(uint32(len(fileData)))
 	} else if event.Op&fsnotify.Remove == fsnotify.Remove {
 		log.Logger.Info("process remove:%s", event.Name)
+		dirRwLock.RLock()
+		done, ok := moniDirNames[event.Name]
+		dirRwLock.RUnlock()
+		if ok {
+			dirRwLock.Lock()
+			done <- true
+			delete(moniDirNames, event.Name)
+			dirRwLock.Unlock()
+			log.Logger.Info("remove/delete moni dir:%s", event.Name)
+		}
 		msg.MsgType = proto.Uint32(syncproto.PROTO_MSG_FILE_REMOVE_REQ)
 		msg.ContentLen = proto.Uint32(0)
 	} else if event.Op&fsnotify.Rename == fsnotify.Rename {
 		log.Logger.Info("process rename :%s", event.Name)
+		dirRwLock.RLock()
+		done, ok := moniDirNames[event.Name]
+		dirRwLock.RUnlock()
+		if ok {
+			dirRwLock.Lock()
+			done <- true
+			delete(moniDirNames, event.Name)
+			dirRwLock.Unlock()
+			log.Logger.Info("rename/delete moni dir:%s", event.Name)
+		}
 		msg.MsgType = proto.Uint32(syncproto.PROTO_MSG_FILE_RENAME_REQ)
 		msg.ContentLen = proto.Uint32(0)
 	} else if event.Op&fsnotify.Chmod == fsnotify.Chmod {
@@ -328,6 +359,14 @@ func newFileWatcher(path string) error {
 	err = watcher.Add(path)
 	if err != nil {
 		return err
+	}
+	dirRwLock.RLock()
+	_, ok := moniDirNames[path]
+	dirRwLock.RUnlock()
+	if !ok {
+		dirRwLock.Lock()
+		moniDirNames[path] = done
+		dirRwLock.Unlock()
 	}
 	<-done
 	return nil
