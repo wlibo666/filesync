@@ -98,6 +98,25 @@ func StartHeartBeatListener() {
 	}()
 }
 
+func fileExist(filename string) bool {
+	fileLen, md5, err := common.GetFileInfo(filename)
+	if err != nil {
+		return false
+	}
+	msg := &syncproto.FileSyncProto{
+		Version:    proto.Uint32(syncproto.PROTO_VERSION),
+		MsgType:    proto.Uint32(syncproto.PROTO_MSG_FILE_EXIST_REQ),
+		FileName:   proto.String(filename),
+		FileMd5:    proto.String(md5),
+		ContentLen: proto.Uint32(fileLen),
+	}
+	err = sendMsgToClients(filename, msg)
+	if err != nil {
+		return false
+	}
+	return true
+}
+
 func syncFiles(conn net.Conn) error {
 	clientIp := strings.Split(conn.RemoteAddr().String(), ":")[0]
 	moniDir := ""
@@ -120,7 +139,12 @@ func syncFiles(conn net.Conn) error {
 		if info.IsDir() {
 			eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Create}
 		} else {
-			eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Write}
+			// check file is exist or not
+			if !fileExist(path) {
+				eventChan <- fsnotify.Event{Name: path, Op: fsnotify.Write}
+			} else {
+				log.Logger.Debug("file:[%s] exist in client,not need send", path)
+			}
 		}
 
 		return nil
@@ -152,7 +176,7 @@ func syncFileOnline(conn net.Conn) error {
 }
 
 func sendMsgToClient(ipAddr string, msg *syncproto.FileSyncProto) error {
-	log.Logger.Info("send msg to client:%s,msgtype:%d,msgname:%s", ipAddr, msg.GetMsgType(), syncproto.GetMsgName(msg.GetMsgType()))
+	log.Logger.Debug("send msg to client:%s,msgtype:%d,msgname:%s", ipAddr, msg.GetMsgType(), syncproto.GetMsgName(msg.GetMsgType()))
 	msgData, err := proto.Marshal(msg)
 	if err != nil {
 		return err
@@ -177,6 +201,34 @@ func sendMsgToClient(ipAddr string, msg *syncproto.FileSyncProto) error {
 	}
 	if resMsg.GetMsgType() != syncproto.PROTO_MSG_COMMON_RESP_OK {
 		return fmt.Errorf("client operate failed,resp msg type:%d,msgname:%s", resMsg.GetMsgType(), syncproto.GetMsgName(msg.GetMsgType()))
+	}
+	return nil
+}
+
+func sendMsgToClients(fileName string, msg *syncproto.FileSyncProto) error {
+	for clientAddr, t := range HeartBeatList {
+		now := time.Now().Unix()
+		if now-t > (syncproto.MAX_RETRY_TIME * syncproto.HEART_BEAT_INTERVAL) {
+			log.Logger.Info("client:%s lost,not need send msg", clientAddr)
+			// record lost file
+			continue
+		}
+		for _, moni := range config.GServerConf.MoniDirs {
+			// match moni dir
+			if strings.Contains(fileName, moni.DirName) {
+				for _, ipAddr := range moni.WhiteList {
+					// match ipaddr
+					if clientAddr == strings.Split(ipAddr, ":")[0] {
+						go func(ipaddr string, msg *syncproto.FileSyncProto) {
+							err := sendMsgToClient(ipaddr, msg)
+							if err != nil && msg.GetMsgType() != syncproto.PROTO_MSG_FILE_EXIST_REQ {
+								log.Logger.Error("send msg to client:%s,msgType:%d,msgname:%s failed,err:%s", ipAddr, msg.GetMsgType(), syncproto.GetMsgName(msg.GetMsgType()), err.Error())
+							}
+						}(ipAddr, msg)
+					}
+				}
+			}
+		}
 	}
 	return nil
 }
@@ -225,31 +277,7 @@ func syncCmdPorcess(event fsnotify.Event) error {
 		return fmt.Errorf("unsupport Op:%d, name:%s", event.Op, event.Name)
 	}
 
-	for clientAddr, t := range HeartBeatList {
-		now := time.Now().Unix()
-		if now-t > (syncproto.MAX_RETRY_TIME * syncproto.HEART_BEAT_INTERVAL) {
-			log.Logger.Info("client:%s lost,not need send msg", clientAddr)
-			// record lost file
-			continue
-		}
-		for _, moni := range config.GServerConf.MoniDirs {
-			// match moni dir
-			if strings.Contains(event.Name, moni.DirName) {
-				for _, ipAddr := range moni.WhiteList {
-					// match ipaddr
-					if clientAddr == strings.Split(ipAddr, ":")[0] {
-						go func(ipaddr string, msg *syncproto.FileSyncProto) {
-							err := sendMsgToClient(ipaddr, msg)
-							if err != nil {
-								log.Logger.Error("send msg to client:%s,msgType:%d,msgname:%s failed,err:%s", ipAddr, msg.GetMsgType(), syncproto.GetMsgName(msg.GetMsgType()), err.Error())
-							}
-						}(ipAddr, msg)
-					}
-				}
-			}
-		}
-	}
-
+	sendMsgToClients(event.Name, msg)
 	return nil
 }
 

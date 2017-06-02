@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	ConfFile = flag.String("conf", "./conf/server.json", "config file,eg: -conf ./conf/server.json")
+	ConfFile = flag.String("conf", "C:\\syncprogram\\server.json", "config file,eg: -conf ./conf/server.json")
 )
 
 func RegistryCtlCSignal() {

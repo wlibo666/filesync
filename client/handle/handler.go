@@ -114,6 +114,7 @@ func createFile(filename string, dirFlag uint32) error {
 		return os.MkdirAll(tmpFile, os.ModePerm)
 	} else if dirFlag == syncproto.PROTO_FILE_LEN {
 		log.Logger.Info("now OpenFile(create):%s", tmpFile)
+		os.MkdirAll(filepath.Dir(tmpFile), os.ModePerm)
 		f, err := os.OpenFile(tmpFile, os.O_CREATE|os.O_TRUNC|os.O_RDWR, os.ModePerm)
 		if err != nil {
 			return err
@@ -179,6 +180,20 @@ func chmodFile(filename string, mode int) error {
 	return nil
 }
 
+func fileExist(filename, fileMd5 string, contentLen uint32) error {
+	tmpFile := getDestFile(filename)
+
+	fileLen, md5, err := common.GetFileInfo(tmpFile)
+	if err != nil {
+		return err
+	}
+	if uint32(fileLen) == contentLen && md5 == fileMd5 {
+		return nil
+	}
+	return fmt.Errorf("server file:%s,md5:%s,len:%d not equl client file:%s,md5:%s,len:%d",
+		filename, fileMd5, contentLen, tmpFile, md5, fileLen)
+}
+
 func ProcessServer(conn net.Conn) error {
 	clientAddr := conn.RemoteAddr().String()
 	// read msg from server
@@ -212,6 +227,8 @@ func ProcessServer(conn net.Conn) error {
 		cmdErr = renameFile(msg.GetFileName(), "dstFile")
 	case syncproto.PROTO_MSG_FILE_CHMOD_REQ:
 		cmdErr = chmodFile(msg.GetFileName(), 0)
+	case syncproto.PROTO_MSG_FILE_EXIST_REQ:
+		cmdErr = fileExist(msg.GetFileName(), msg.GetFileMd5(), msg.GetContentLen())
 	default:
 		return fmt.Errorf("unsupport msgtype:%d", msg.GetMsgType())
 	}
@@ -219,7 +236,9 @@ func ProcessServer(conn net.Conn) error {
 	if cmdErr == nil {
 		respMsg.MsgType = proto.Uint32(syncproto.PROTO_MSG_COMMON_RESP_OK)
 	} else {
-		log.Logger.Warn("operate file:%s failed,err:%s", msg.GetFileName(), cmdErr.Error())
+		if msg.GetMsgType() != syncproto.PROTO_MSG_FILE_EXIST_REQ {
+			log.Logger.Warn("cmdtype:%s file:%s failed,err:%s", syncproto.GetMsgName(msg.GetMsgType()), msg.GetFileName(), cmdErr.Error())
+		}
 		respMsg.MsgType = proto.Uint32(syncproto.PROTO_MSG_COMMON_RESP_FAIL)
 	}
 	respData, err := proto.Marshal(respMsg)
