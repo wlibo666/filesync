@@ -182,7 +182,7 @@ func chmodFile(filename string, mode int) error {
 
 func fileExist(filename, fileMd5 string, contentLen uint32) error {
 	tmpFile := getDestFile(filename)
-
+	os.MkdirAll(filepath.Dir(tmpFile), os.ModePerm)
 	fileLen, md5, err := common.GetFileInfo(tmpFile)
 	if err != nil {
 		return err
@@ -237,7 +237,9 @@ func ProcessServer(conn net.Conn) error {
 		respMsg.MsgType = proto.Uint32(syncproto.PROTO_MSG_COMMON_RESP_OK)
 	} else {
 		if msg.GetMsgType() != syncproto.PROTO_MSG_FILE_EXIST_REQ {
-			log.Logger.Warn("cmdtype:%s file:%s failed,err:%s", syncproto.GetMsgName(msg.GetMsgType()), msg.GetFileName(), cmdErr.Error())
+			log.Logger.Warn("cmdtype:%s failed,err:%s", syncproto.GetMsgName(msg.GetMsgType()), cmdErr.Error())
+		} else {
+			log.Logger.Debug("cmdtype:%s failed,err:%s", syncproto.GetMsgName(msg.GetMsgType()), cmdErr.Error())
 		}
 		respMsg.MsgType = proto.Uint32(syncproto.PROTO_MSG_COMMON_RESP_FAIL)
 	}

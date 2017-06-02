@@ -27,8 +27,8 @@ var (
 
 const (
 	SYNC_FILE_NUM_ONETIME    = 30
-	MAX_RETRY_TIME           = 3
-	HEART_BEAT_INTERVAL      = 5
+	MAX_RETRY_TIME           = 30
+	HEART_BEAT_INTERVAL      = 10
 	HEART_BEAT_LISTENER_PORT = 6001
 )
 

@@ -8,6 +8,7 @@ import (
 	"strconv"
 	"time"
 
+	reuse "github.com/jbenet/go-reuseport"
 	"github.com/wlibo666/common-lib/log"
 )
 
@@ -19,7 +20,7 @@ const (
 type NetHandle func(conn net.Conn) error
 
 func StartListen(addr string, handle NetHandle) {
-	ln, err := net.Listen("tcp", addr)
+	ln, err := reuse.Listen("tcp", addr)
 	if err != nil {
 		log.Logger.Error("Listen [%s] failed,err:%s", addr, err.Error())
 		os.Exit(1)

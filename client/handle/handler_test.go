@@ -16,7 +16,7 @@ type S1 struct {
 func myDestFile(filename string) string {
 	var S2 []S1 = []S1{
 		// windows  linux
-		{ServerDirName: "E:\\WorkCode\\src\\", LocalDirName: "/letv/mysrc"},
+		{ServerDirName: "E:\\Tools\\", LocalDirName: "/letv/mysrc"},
 		// windows windows
 		{ServerDirName: "E:\\WorkCode1\\src\\", LocalDirName: "E:\\WorkCodeBak\\src"},
 		// linux windows
@@ -49,10 +49,10 @@ func myDestFile(filename string) string {
 }
 
 func TestGetDestFile(t *testing.T) {
-	filename := "E:\\WorkCode\\src\\a.txt"
+	filename := "E:\\Tools\\goenv\\errcheck-12fd1ab9811e54c55207f3e83134ff59829fbf21.zip"
 	file := myDestFile(filename)
 	t.Logf("file is:%s", file)
-	if file != "/letv/mysrc/a.txt" {
+	if file != "/letv/mysrc/goenv/errcheck-12fd1ab9811e54c55207f3e83134ff59829fbf21.zip" {
 		t.Fatalf("window linux failed")
 	}
 
